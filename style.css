@@ -1,0 +1,97 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+    text-align: left;
+
+    --main-container-width: 72vw;
+    --main-container-hmargin: 5vw;
+}
+html {
+    /* show scrollbar even if not necessary -> constant width of content */
+    overflow-y: scroll;
+}
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+}
+
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner {
+    border: none;
+}
+
+#main-container {
+    position: absolute;
+    top: 5vh;
+    left: var(--main-container-hmargin);
+    padding-bottom: 5vh;
+    width: var(--main-container-width);
+    font-size: 3em;
+}
+#time-container {
+    position: absolute;
+    top: 5vh;
+    left: calc(var(--main-container-width) + 2 * var(--main-container-hmargin));
+    width: calc(100vw - var(--main-container-width) - 3 * var(--main-container-hmargin));
+}
+
+#main-container #input {
+    background-color: #111;
+    color: #ccc;
+    border: 1px solid #555;
+    width: 100%;
+    height: 40vh;
+    resize: vertical;
+}
+
+#main-container .note {
+    margin-bottom: 5vh;
+    min-height: 0.5em;
+}
+#main-container .note.inactive {
+    display: none;
+}
+#main-container .note:not(.active) {
+    font-size: 75%;
+    color: #666;
+}
+
+#time-container > div {
+    margin-bottom: 2vh;
+}
+#time-container .explanation {
+    color: #888;
+    font-size: 0.8em;
+    margin-bottom: -0.5vh;
+}
+#time-container .time {
+    color: #ccc;
+    font-size: 2.5em;
+}
+
+button {
+    font-size: 1.2em;
+    background-color: #111;
+    color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 0.2em;
+    cursor: pointer;
+    padding: 0.25em;
+    margin-bottom: 0.25em;
+}
+button:hover {
+    background-color: #333;
+}
+button:hover, button:focus {
+    border-color: #fff;
+}
+button:active {
+    background-color: #444;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./style.css">
+	<script src="main.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+	<div id="main-container">
+		<textarea id="input" class="hidden"></textarea>
+		<div style="font-size: 0.4em; margin-top: 5vh; text-align: center;">
+			<button id="btn-save-notes" class="hidden">Save Notes</button>
+		</div>
+		<div id="hint-edit-notes" class="hidden" style="font-size: 0.4em; margin-top: 5vh; text-align: center; color: #666;">
+			Notes are parsed line by line. Save the notes and switch between them with the arrow keys.
+			Lines starting with ## are ignored when forecasting the time.
+			However, you can include those by putting a number (in seconds, preceded by whitespace) at the end of the line.
+		</div>
+	</div>
+	<div id="time-container">
+		<div>
+			<div class="explanation">Current Time</div>
+			<div class="time" id="current-time">--:--</div>
+		</div>
+		<div>
+			<div class="explanation">Forecast</div>
+			<div class="time" id="forecast">--:--</div>
+		</div>
+		<div>
+			<button id="btn-toggle-time">Start</button>
+			<button id="btn-set-time">Set Time</button>
+			<button id="btn-reset-time">Reset Time</button>
+			<button id="btn-edit-notes">Edit Notes</button>
+		</div>
+	</div>
+</body>
+
+</html>

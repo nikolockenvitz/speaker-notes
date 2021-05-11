@@ -220,7 +220,8 @@ function getCurrentTimeInSeconds() {
   return new Date().getTime() / 1000;
 }
 
-const LS_KEY_PREFIX = new URL(window.location.href).hostname + "-";
+const url = new URL(window.location.href);
+const LS_KEY_PREFIX = url.hostname + url.pathname + "-";
 const LS_KEY_NOTES = LS_KEY_PREFIX + "notes";
 const LS_KEY_TIME = LS_KEY_PREFIX + "time";
 function getNotesFromLocalStorage() {
